@@ -168,20 +168,19 @@
 
 			else {
 				$.ajax({
-					type: "POST",
-					url: "assets/php/contactForm.php",
-					dataType: 'json',
-					data: {
-						c_email: c_email,
-						c_name: c_name,
-						c_message: c_message
+					type: "GET",
+                    url: "/api/SendMail",
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8',
+                    data: {
+                        info: 'Resume App Have Message<br />From: ' + c_email + '<br />Name: ' + c_name + '<br />Message: ' + c_message,
 					},
 					beforeSend: function(result) {
 						$('#contact-form button').empty();
 						$('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
 					},
 					success: function(result) {
-						if(result.sendstatus == 1) {
+						if(result == 1) {
 							responseMessage.html(result.message);
 							responseMessage.fadeIn(500);
 							$('#contact-form').fadeOut(500);

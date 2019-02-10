@@ -9,6 +9,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700);
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 
 body {
 	font: 300 15px/1.6 'Raleway', serif, sans-serif;
@@ -759,5 +760,26 @@ h3 > .fa {
 	}
 
 }
+.cht-c{
+	font-family: 'cwTeXYen', sans-serif;
+}
+.fs-24{
+	font-size: 24px;
+}
 
+.fs-20{
+	font-size: 20px;
+}
 
+.cht{
+	font-family: Microsoft JhengHei;
+}
+.portfolio__image{
+	width: 390px;
+	height: 260px;
+}
+
+.portfolio__icon{
+	font-size: 32px;
+	
+}
